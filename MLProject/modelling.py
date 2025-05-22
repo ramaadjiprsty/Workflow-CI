@@ -10,7 +10,6 @@ def main(n_estimators, learning_rate, max_depth):
     warnings.filterwarnings("ignore")
     np.random.seed(42)
 
-
     # Load dataset
     train_data = pd.read_csv("car_evaluation_train_preprocessed.csv")
     test_data = pd.read_csv("car_evaluation_test_preprocessed.csv")
