@@ -17,13 +17,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     # Checks-out your repository under $GITHUB_WORKSPACE
+      # Checks-out your repository under $GITHUB_WORKSPACE
       - uses: actions/checkout@v3
 
-      # Setup Python 3.12.7
-      - name: Setup Python 3.12.7
-        uses: actions/setup-python@v4
+      # # Setup Python 3.12.7
+      # - name: Setup Python 3.12.7
+      #   uses: actions/setup-python@v4
+      #   with:
+      #     python-version: 3.12.7
+
+      # Setup Miniconda & create environment from conda.yaml
+      - name: Set up Conda and create env
+        uses: conda-incubator/setup-miniconda@v2
         with:
+          activate-environment: mlflow-env
+          environment-file: MLProject/conda.yaml
+          auto-activate-base: false
           python-version: 3.12.7
 
       # Check Env Variables
