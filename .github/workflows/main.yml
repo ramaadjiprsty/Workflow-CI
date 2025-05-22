@@ -73,6 +73,12 @@ jobs:
         run: |
           echo "RUN_ID=$(ls -td mlruns/0/*/ | head -n1 | xargs basename)" >> $GITHUB_ENV
 
+      - name: Debug MLflow directory
+        run: |
+          echo "Run ID: $RUN_ID"
+          ls -R mlruns/0/$RUN_ID
+
+
       # Build docker model
       - name: Build Docker Model
         run: |
