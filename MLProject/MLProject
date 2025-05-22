@@ -9,7 +9,7 @@ entry_points:
       max_depth: {type: int, default: 3}
       learning_rate: {type: float, default: 0.1}
     command: >
-      python train.py
+      python modelling.py
       --n_estimators {n_estimators}
       --max_depth {max_depth}
       --learning_rate {learning_rate}
