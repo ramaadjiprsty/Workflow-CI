@@ -79,6 +79,15 @@ jobs:
           echo "Run ID: $RUN_ID"
           ls -R mlruns/0/$RUN_ID
 
+      - name: Push artifacts to repository
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add exported_model
+          git commit -m "Add latest model artifact"
+          git push
+
+
 
       # Build docker model
       - name: Build Docker Model
