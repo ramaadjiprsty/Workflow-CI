@@ -77,7 +77,9 @@ jobs:
 
       # Build docker model
       - name: Build Docker Model
+        working-directory: MLProject
         run: |
+          export MLFLOW_TRACKING_URI=./mlruns
           mlflow models build-docker --model-uri "runs:/$RUN_ID/model" --name "car-eval"
 
       # Login to Docker Hub
