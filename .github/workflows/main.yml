@@ -49,17 +49,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install mlflow
 
-      # Run as a mlflow project
-      - name: Run as MLfLow Project
-        run: |
-          mlflow run MLProject --env-manager=local
-
-      # # Run MLflow with conda env
-      # - name: Run as MLflow Project (with conda env)
-      #   shell: bash -l {0}
+      # # Run as a mlflow project
+      # - name: Run as MLfLow Project
       #   run: |
-      #     conda activate mlflow-env
       #     mlflow run MLProject --env-manager=local
+
+      # Run MLflow with conda env
+      - name: Run as MLflow Project (with conda env)
+        shell: bash -l {0}
+        run: |
+          conda activate mlflow-env
+          mlflow run MLProject --env-manager=local
 
       # get latest run_id
       - name: Get latest MLflow run_id
