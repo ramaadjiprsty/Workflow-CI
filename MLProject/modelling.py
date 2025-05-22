@@ -11,8 +11,8 @@ def main(n_estimators, learning_rate, max_depth):
     np.random.seed(42)
 
     # Load dataset
-    train_data = pd.read_csv("car_evaluation_train_preprocessed.csv")
-    test_data = pd.read_csv("car_evaluation_test_preprocessed.csv")
+    train_data = pd.read_csv("MLProject/car_evaluation_train_preprocessed.csv")
+    test_data = pd.read_csv("MLProject/car_evaluation_test_preprocessed.csv")
 
     X_train = train_data.drop("class", axis=1)
     y_train = train_data["class"]
