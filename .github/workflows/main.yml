@@ -66,9 +66,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Move mlruns directory into MLProject
+        run: mv mlruns MLProject/
+
       - name: Commit and push MLflow artifacts
         run: |
-          git add "$GITHUB_WORKSPACE/MLProject/mlruns/0/$RUN_ID/artifacts/model/"
+          git add mlruns/0/$RUN_ID/artifacts/model/
           git diff --cached --quiet || git commit -m "chore: add MLflow model artifacts for run $RUN_ID"
           git push origin main
 
