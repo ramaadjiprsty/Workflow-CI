@@ -41,7 +41,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mlflowl
+          pip install mlflow
 
       # Run MLflow with conda env
       - name: Run as MLflow Project (with conda env)
