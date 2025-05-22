@@ -71,8 +71,7 @@ jobs:
       # get latest run_id
       - name: Get latest MLflow run_id
         run: |
-          RUN_ID=$(basename $(ls -td mlruns/0/*/ | head -n 1))
-          echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
+          echo "RUN_ID=$(ls -td mlruns/0/*/ | head -n1 | xargs basename)" >> $GITHUB_ENV
 
       # Build docker model
       - name: Build Docker Model
