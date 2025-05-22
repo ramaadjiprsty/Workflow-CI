@@ -5,14 +5,19 @@ import warnings
 import numpy as np
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
+import os
 
 def main(n_estimators, learning_rate, max_depth):
     warnings.filterwarnings("ignore")
     np.random.seed(42)
 
+    
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(script_dir, "preprocessed_data")
+
     # Load dataset
-    train_data = pd.read_csv("MLProject/preprocessed_data/car_evaluation_train_preprocessed.csv")
-    test_data = pd.read_csv("MLProject/preprocessed_data/car_evaluation_test_preprocessed.csv")
+    train_data = pd.read_csv(os.path.join(data_dir, "car_evaluation_train_preprocessed.csv"))
+    test_data = pd.read_csv(os.path.join(data_dir, "car_evaluation_test_preprocessed.csv"))
 
     X_train = train_data.drop("class", axis=1)
     y_train = train_data["class"]
