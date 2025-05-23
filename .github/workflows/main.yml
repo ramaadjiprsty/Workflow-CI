@@ -69,7 +69,7 @@ jobs:
 
       - name: Commit and push MLflow artifacts
         run: |
-          git add mlruns/0/$RUN_ID/artifacts/model/
+          git add mlruns/
           git diff --cached --quiet || git commit -m "chore: add MLflow model artifacts for run $RUN_ID"
           git push origin main
 
