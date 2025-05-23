@@ -1,0 +1,23 @@
+digest: 377bb0fe
+name: dataset
+profile: '{"num_rows": 5, "num_elements": 105}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "cat__buying_high", "required":
+  true}, {"type": "double", "name": "cat__buying_low", "required": true}, {"type":
+  "double", "name": "cat__buying_med", "required": true}, {"type": "double", "name":
+  "cat__buying_vhigh", "required": true}, {"type": "double", "name": "cat__maint_high",
+  "required": true}, {"type": "double", "name": "cat__maint_low", "required": true},
+  {"type": "double", "name": "cat__maint_med", "required": true}, {"type": "double",
+  "name": "cat__maint_vhigh", "required": true}, {"type": "double", "name": "cat__doors_2",
+  "required": true}, {"type": "double", "name": "cat__doors_3", "required": true},
+  {"type": "double", "name": "cat__doors_4", "required": true}, {"type": "double",
+  "name": "cat__doors_5more", "required": true}, {"type": "double", "name": "cat__persons_2",
+  "required": true}, {"type": "double", "name": "cat__persons_4", "required": true},
+  {"type": "double", "name": "cat__persons_more", "required": true}, {"type": "double",
+  "name": "cat__lug_boot_big", "required": true}, {"type": "double", "name": "cat__lug_boot_med",
+  "required": true}, {"type": "double", "name": "cat__lug_boot_small", "required":
+  true}, {"type": "double", "name": "cat__safety_high", "required": true}, {"type":
+  "double", "name": "cat__safety_low", "required": true}, {"type": "double", "name":
+  "cat__safety_med", "required": true}]}'
+source: '{"tags": {"mlflow.user": "runner", "mlflow.source.name": "modelling.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "3eea0bb75b138e7ee1ebff5ffdbc7d8c7941e905"}}'
+source_type: code

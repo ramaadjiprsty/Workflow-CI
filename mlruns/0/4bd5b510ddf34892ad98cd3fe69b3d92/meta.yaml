@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/mlruns/0/4bd5b510ddf34892ad98cd3fe69b3d92/artifacts
+end_time: 1748016659102
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4bd5b510ddf34892ad98cd3fe69b3d92
+run_name: illustrious-calf-586
+run_uuid: 4bd5b510ddf34892ad98cd3fe69b3d92
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748016649592
+status: 3
+tags: []
+user_id: runner
